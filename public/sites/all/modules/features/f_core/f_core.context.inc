@@ -43,6 +43,24 @@ function f_core_context_default_contexts() {
           'region' => 'pre-page',
           'weight' => '-9',
         ),
+        'blockify-blockify-logo' => array(
+          'module' => 'blockify',
+          'delta' => 'blockify-logo',
+          'region' => 'pre-page',
+          'weight' => '-8',
+        ),
+        'menu_block-1' => array(
+          'module' => 'menu_block',
+          'delta' => '1',
+          'region' => 'header',
+          'weight' => '-10',
+        ),
+        'menu_block-2' => array(
+          'module' => 'menu_block',
+          'delta' => '2',
+          'region' => 'header',
+          'weight' => '-9',
+        ),
       ),
     ),
   );
