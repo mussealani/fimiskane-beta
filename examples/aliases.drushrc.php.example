@@ -1,0 +1,22 @@
+<?php
+
+/**
+ * @file
+ * Site aliases that are utilised by Drush.
+ *
+ * These aliases makes it possible to execute Drush on another site. By adding
+ * the alias in the beginning of the command, the command will be executed on
+ * the other site. E.g. drush @staging features.
+ *
+ * Copy this file to public/sites/default and modify as you wish.
+ */
+
+/**
+ * Testing environment.
+ */
+$aliases['testing'] = array(
+  'uri' => 'http://example.oddserver.se',
+  'root' => '/mnt/persist/www/example',
+  'remote-host' => 'oddserver.se',
+  'remote-user' => 'root',
+);

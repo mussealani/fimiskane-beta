@@ -1,0 +1,15 @@
+# Server specifics, so we don't include them
+/public/.htaccess
+/public/sites/*/settings.local.php
+
+# User generated content should not be in the repository
+/public/sites/*/files/*
+/public/sites/*/tmp/*
+
+# Include README in the files folders.
+!/public/sites/*/files/README.txt
+
+# Exlude various other files
+.DS_Store
+.sass-cache
+/public/cache

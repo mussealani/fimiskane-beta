@@ -1,0 +1,21 @@
+name = filminskane
+core = 7.x
+
+; Assets.
+scripts[] = assets/owl-carousel/owl.carousel.js
+
+
+; Javascripts.
+scripts[] = dist/js/bundle.js
+
+; Stylesheets.
+stylesheets[screen][] = assets/owl-carousel/owl.carousel.css
+stylesheets[screen][] = assets/owl-carousel/owl.theme.css
+stylesheets[print][] = dist/css/print.css
+stylesheets[screen][] = dist/css/main.css
+
+; Regions.
+regions[pre-page] = Pre Page
+regions[header] = Header
+regions[content] = Content
+regions[footer] = Footer

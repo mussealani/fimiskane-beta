@@ -1,0 +1,32 @@
+<?php
+
+/**
+ * @file
+ * Local configuration for this server only.
+ *
+ * Copy this file to public/sites/default and use it to store any configuration
+ * that shouldn't get tracked by Git. It will be loaded automatically by
+ * settings.php.
+ */
+
+// Database settings.
+$databases['default']['default'] = array(
+  'driver' => 'mysql',
+  'database' => 'database',
+  'username' => 'root',
+  'password' => '',
+  'host' => '127.0.0.1',
+);
+
+// Enable MySQL storage of multi-byte UTF-8 characters, such as emojis and asian
+// symbols. Uncomment the rows below if you wish to enable this, but please note
+// that the server requirements must've been met.
+// @see https://www.drupal.org/node/2754539
+//$databases['default']['default']['charset'] = 'utf8mb4';
+//$databases['default']['default']['collation'] = 'utf8mb4_general_ci';
+
+// The base URL for where the site is accessible.
+$base_url = 'http://www.example.com';
+
+// Enable or disable theme debug information.
+$conf['theme_debug'] = FALSE;

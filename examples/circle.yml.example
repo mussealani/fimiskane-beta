@@ -1,0 +1,28 @@
+#
+# Configuration file for CircleCi. This file should be located at the repository
+# root in order for CircleCi to interpret it.
+# 
+# Please read the documentation at https://circleci.com/docs/configuration/
+# to fully understand the possibilities.
+#
+
+test:
+  override:
+    - echo "Testing hasn't been implemented yet"
+
+deployment:
+  testing:
+    # Deploy to testing when pushing develop.
+    branch: develop
+    commands:
+      - deploy/testing.sh
+  staging:
+    # Deploy to staging when pushing a release branch.
+    branch: /^release/.*/
+    commands:
+      - deploy/staging.sh
+  production:
+    # Deploy to production when pushing master.
+    branch: master
+    commands:
+      - deploy/production.sh
