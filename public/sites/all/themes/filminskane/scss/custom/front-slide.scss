@@ -13,12 +13,19 @@
     bottom: 0;
     left: 50%;
     right: 100px;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, .8);
     padding: 40px;
+
+    @include media($breakpoint-menu-small) {
+      left: 0;
+      right: 0;
+    }
 
     h2 {
       text-transform: uppercase;
       font-size: 3.8rem;
+      line-height: 5rem;
+      word-break: break-word;
     }
   }
 }
@@ -29,19 +36,38 @@
   left: 0;
   right: 50%;
 
+  @include media($breakpoint-menu-small) {
+    position: relative;
+    margin: 0;
+  }
+
   .owl-pagination {
     padding: 2rem 0;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, .5);
     filter: blur(3px);
 
-    .active {
-      span {
-        background-color: #fff;
-      }
+    @include media($breakpoint-menu-small) {
+      background-color: transparent;
+      padding: 0;
+      filter: none;
     }
   }
 
   .owl-buttons {
     display: none;
+  }
+}
+
+.owl-pagination {
+
+  .active {
+
+    span {
+      background-color: $white;
+
+      @include media($breakpoint-menu-small) {
+        background-color: $black;
+      }
+    }
   }
 }
