@@ -16,6 +16,7 @@ stylesheets[screen][] = dist/css/main.css
 
 ; Regions.
 regions[pre-page] = Pre Page
+regions[pre-header] = Pre Header
 regions[header] = Header
 regions[content] = Content
 regions[footer] = Footer

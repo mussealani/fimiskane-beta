@@ -23,6 +23,12 @@
 		</div><!-- end site-pre-page -->
 	<?php endif ?>
 
+  <?php if ($page['pre-header']): ?>
+    <section class="pre-header-wrapper">
+      <?php print render($page['pre-header']); ?>
+    </section><!-- end pre-header -->
+  <?php endif ?>
+
   <?php if ($page['header']): ?>
     <header class="site-header">
       <?php print render($page['header']); ?>

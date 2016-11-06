@@ -384,6 +384,10 @@ body {
   font-size: 1.6rem;
   line-height: 24px; }
 
+.pre-header-wrapper {
+  padding: 2rem 5rem;
+  overflow: auto; }
+
 .view-display-id-f_slide .owl-item img {
   display: block;
   width: 100%;
