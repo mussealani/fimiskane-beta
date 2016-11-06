@@ -17,7 +17,7 @@
       float: left;
       margin: 6px 5px 0 5px;
       padding: 6px;
-    }   
+    }
   }
 }
 
@@ -43,10 +43,11 @@
     &.up {
       background-image: url('../../graphics/icons/up-arrow.svg');
     }
+
     &.down {
       background-image: url('../../graphics/icons/down-arrow.svg');
     }
-  } 
+  }
 }
 
 .contact-tab-wrapper {
@@ -58,6 +59,7 @@
 .block-boxes-external-links-menu {
   background-color: $black;
   display: none;
+
   a {
     color: $white;
     text-decoration: none;

@@ -1,10 +1,11 @@
 .site-header {
   background-color: $theme-base-color;
   overflow: auto;
+
   .block-blockify-blockify-logo {
+    @include span-columns(5);
     position: relative;
     z-index: 1;
-    @include span-columns(5);
     margin-top: 1rem;
   }
 }
@@ -16,6 +17,11 @@
     width: 40px;
     height: 50px;
     float: right;
+    display: none;
+
+    @include media($breakpoint-menu-medium) {
+      display: block;
+    }
   }
 
   .main-menu-toggle-open {
@@ -25,67 +31,76 @@
     background-position: center;
     background-size: cover;
     cursor: pointer;
-    display: none;
+
+  }
+
+  .menu {
+    clear: both;
+    display: table;
+    margin: 0 auto;
 
     @include media($breakpoint-menu-medium) {
       display: block;
     }
-  }
-  
-  .menu {
-    clear: both;
+
     a {
       color: $white;
       display: block;
       padding: 0 1rem;
+      font-size: 120%;
+    }
+  }
+}
+
+.menu-block-wrapper {
+  
+  li {
+    display: block;
+    float: left;
+    padding: 2rem 0;
+
+    &.active {
+      background-color: rgba(0, 0, 0, .3);
     }
   }
 
-  .menu-block-wrapper {
+  @include media($breakpoint-menu-medium) {
+    @include transition(transform .3s ease-in-out);
+    @include transform(translateX(100%));
+    position: absolute;
+    width: 50%;
+    height: 100vh;
+    right: 0;
+    z-index: 1;
+    padding: 2rem;
+    background-color: $black-brown-light;
 
-    @include media($breakpoint-menu-medium) {
-      @include transition(transform .3s ease-in-out);
-      @include transform(translateX(100%));
-      position: absolute;
-      width: 50%;
-      height: 100vh;
-      right: 0;
-      z-index: 1;
-      padding: 2rem;
-      background-color: $black-brown-light;
-      // display: none;
+    li {
+      float: none;
+      display: block;
+      padding: 0;
 
-      li {
-        float: none;
-        display: block;
-
-        a {
-          height: 50px;
-          line-height: 50px;
-          border-bottom: 1px solid #434343;
-        }
+      a {
+        height: 50px;
+        line-height: 50px;
+        border-bottom: 1px solid $black-brown-lighter;
       }
     }
-
-
-    @include media($breakpoint-menu-small) {
-      width: 100%;
-    }
-
-    &.show {
-      @include transform(translateX(0));
-    }
-
-    .main-menu-toggle-close {
-      background-image: url('../../graphics/icons/close.svg');
-      background-size: contain;
-      background-repeat: no-repeat;
-      width: 30px;
-      height: 35px;
-    }   
   }
 
-  @include media($breakpoint-small) {
+  @include media($breakpoint-menu-small) {
+    width: 100%;
+  }
 
+  &.show {
+    @include transform(translateX(0));
+  }
+
+  .main-menu-toggle-close {
+    background-image: url('../../graphics/icons/close.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 35px;
   }
 }

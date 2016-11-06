@@ -1,6 +1,6 @@
 import $ from 'jquery';
 const toggleSiteNav = {
-  init() {  
+  init() {
     $('.main-menu-toggle').on('click', function () {
       $('.site-header .menu-block-wrapper').toggleClass('show');
     });

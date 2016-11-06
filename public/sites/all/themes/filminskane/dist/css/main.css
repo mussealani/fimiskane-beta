@@ -441,12 +441,12 @@ li {
   background-color: #68a0c7;
   overflow: auto; }
   .site-header .block-blockify-blockify-logo {
-    position: relative;
-    z-index: 1;
     float: left;
     display: block;
     margin-right: 2.35765%;
     width: 40.29137%;
+    position: relative;
+    z-index: 1;
     margin-top: 1rem; }
     .site-header .block-blockify-blockify-logo:last-child {
       margin-right: 0; }
@@ -456,62 +456,80 @@ li {
   .main-menu .main-menu-toggle {
     width: 40px;
     height: 50px;
-    float: right; }
+    float: right;
+    display: none; }
+    @media screen and (max-width: 1300px) {
+      .main-menu .main-menu-toggle {
+        display: block; } }
   .main-menu .main-menu-toggle-open {
     margin-right: 4rem;
     background-image: url("../../graphics/icons/menu.svg");
     background-position: center;
     background-size: cover;
-    cursor: pointer;
-    display: none; }
-    @media screen and (max-width: 1300px) {
-      .main-menu .main-menu-toggle-open {
-        display: block; } }
+    cursor: pointer; }
   .main-menu .menu {
-    clear: both; }
+    clear: both;
+    display: table;
+    margin: 0 auto; }
+    @media screen and (max-width: 1300px) {
+      .main-menu .menu {
+        display: block; } }
     .main-menu .menu a {
       color: #fff;
       display: block;
-      padding: 0 1rem; }
-  @media screen and (max-width: 1300px) {
-    .main-menu .menu-block-wrapper {
-      -webkit-transition: -webkit-transform 0.3s ease-in-out;
-      -moz-transition: -moz-transform 0.3s ease-in-out;
-      transition: transform 0.3s ease-in-out;
-      -webkit-transform: translateX(100%);
-      -moz-transform: translateX(100%);
-      -ms-transform: translateX(100%);
-      -o-transform: translateX(100%);
-      transform: translateX(100%);
-      position: absolute;
-      width: 50%;
-      height: 100vh;
-      right: 0;
-      z-index: 1;
-      padding: 2rem;
-      background-color: #303033; }
-      .main-menu .menu-block-wrapper li {
-        float: none;
-        display: block; }
-        .main-menu .menu-block-wrapper li a {
-          height: 50px;
-          line-height: 50px;
-          border-bottom: 1px solid #434343; } }
-  @media screen and (max-width: 1100px) {
-    .main-menu .menu-block-wrapper {
-      width: 100%; } }
-  .main-menu .menu-block-wrapper.show {
-    -webkit-transform: translateX(0);
-    -moz-transform: translateX(0);
-    -ms-transform: translateX(0);
-    -o-transform: translateX(0);
-    transform: translateX(0); }
-  .main-menu .menu-block-wrapper .main-menu-toggle-close {
-    background-image: url("../../graphics/icons/close.svg");
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 30px;
-    height: 35px; }
+      padding: 0 1rem;
+      font-size: 120%; }
+
+.menu-block-wrapper li {
+  display: block;
+  float: left;
+  padding: 2rem 0; }
+  .menu-block-wrapper li.active {
+    background-color: rgba(0, 0, 0, 0.3); }
+
+@media screen and (max-width: 1300px) {
+  .menu-block-wrapper {
+    -webkit-transition: -webkit-transform 0.3s ease-in-out;
+    -moz-transition: -moz-transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out;
+    -webkit-transform: translateX(100%);
+    -moz-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    -o-transform: translateX(100%);
+    transform: translateX(100%);
+    position: absolute;
+    width: 50%;
+    height: 100vh;
+    right: 0;
+    z-index: 1;
+    padding: 2rem;
+    background-color: #303033; }
+    .menu-block-wrapper li {
+      float: none;
+      display: block;
+      padding: 0; }
+      .menu-block-wrapper li a {
+        height: 50px;
+        line-height: 50px;
+        border-bottom: 1px solid #434343; } }
+
+@media screen and (max-width: 1100px) {
+  .menu-block-wrapper {
+    width: 100%; } }
+
+.menu-block-wrapper.show {
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+  transform: translateX(0); }
+
+.menu-block-wrapper .main-menu-toggle-close {
+  background-image: url("../../graphics/icons/close.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 30px;
+  height: 35px; }
 
 @media only screen and (min-device-width: 768px) {
   .toggle-other-sites .arrow {
