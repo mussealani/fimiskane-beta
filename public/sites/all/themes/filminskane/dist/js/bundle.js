@@ -39,6 +39,31 @@ var _jquery2 = _interopRequireDefault(_jquery);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+var toggleSiteNav = {
+  init: function init() {
+    (0, _jquery2.default)('.main-menu-toggle').on('click', function () {
+      (0, _jquery2.default)('.site-header .menu-block-wrapper').toggleClass('show');
+    });
+  }
+};
+
+exports.default = toggleSiteNav;
+
+}).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
+},{}],3:[function(require,module,exports){
+(function (global){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _jquery = (typeof window !== "undefined" ? window['jQuery'] : typeof global !== "undefined" ? global['jQuery'] : null);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
 var prePageNavToggle = {
   init: function init() {
     (0, _jquery2.default)('.other-sites-toggler a span').addClass('down');
@@ -52,7 +77,7 @@ var prePageNavToggle = {
 exports.default = prePageNavToggle;
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],3:[function(require,module,exports){
+},{}],4:[function(require,module,exports){
 (function (global){
 'use strict';
 
@@ -108,7 +133,7 @@ utils.throttle = function (cb) {
 exports.default = utils;
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"Modernizr":5}],4:[function(require,module,exports){
+},{"Modernizr":6}],5:[function(require,module,exports){
 (function (global){
 'use strict';
 
@@ -128,14 +153,18 @@ var _frontSlide = require('./lib/front-slide');
 
 var _frontSlide2 = _interopRequireDefault(_frontSlide);
 
+var _mainNav = require('./lib/main-nav');
+
+var _mainNav2 = _interopRequireDefault(_mainNav);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-// Import libs
 (function () {
   // Run when DOM is ready
   (0, _jquery2.default)(function () {
     _prePageMenu2.default.init();
     _frontSlide2.default.init();
+    _mainNav2.default.init();
 
     // If SVG is not supported replace it with png version
     _utils2.default.replaceSVG();
@@ -145,10 +174,10 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
   Drupal.behaviors.filminskane = {
     attach: function attach() {}
   };
-})();
+})(); // Import libs
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"./lib/front-slide":1,"./lib/pre-page-menu":2,"lib/utils":3}],5:[function(require,module,exports){
+},{"./lib/front-slide":1,"./lib/main-nav":2,"./lib/pre-page-menu":3,"lib/utils":4}],6:[function(require,module,exports){
 (function (global){
 ; var __browserify_shim_require__=require;(function browserifyShim(module, exports, require, define, browserify_shim__define__module__export__) {
 /*! modernizr 3.3.1 (Custom Build) | MIT *
@@ -159,4 +188,4 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 }).call(global, undefined, undefined, undefined, undefined, function defineExport(ex) { module.exports = ex; });
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}]},{},[4]);
+},{}]},{},[5]);

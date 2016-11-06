@@ -20,7 +20,7 @@
  * @see template_process()
  */
 ?>
-<div class="main-menu">
+<nav class="main-menu">
 	<div class="main-menu-toggle main-menu-toggle-open"></div><!-- end main-menu-toggle -->
 	  <?php print $content ?>
-</div>
+</nav>

@@ -1,5 +1,6 @@
 .site-header {
-  padding-top: 2rem;
+  background-color: $theme-base-color;
+  overflow: auto;
   .block-blockify-blockify-logo {
     position: relative;
     z-index: 1;
@@ -9,32 +10,30 @@
 }
 
 .main-menu {
-  position: relative;
+  padding: 0 1rem;
 
   .main-menu-toggle {
-    width: 50px;
+    width: 40px;
     height: 50px;
     float: right;
-    margin-top: 1rem;
+  }
+
+  .main-menu-toggle-open {
+
     margin-right: 4rem;
     background-image: url('../../graphics/icons/menu.svg');
     background-position: center;
     background-size: cover;
     cursor: pointer;
     display: none;
-    background-color: red;
 
     @include media($breakpoint-menu-medium) {
       display: block;
     }
   }
-
-  .main-menu-toggle-open {
-
-  }
   
   .menu {
-
+    clear: both;
     a {
       color: $white;
       display: block;
@@ -43,7 +42,6 @@
   }
 
   .menu-block-wrapper {
-    background-color: red;
 
     @include media($breakpoint-menu-medium) {
       @include transition(transform .3s ease-in-out);
@@ -55,7 +53,7 @@
       z-index: 1;
       padding: 2rem;
       background-color: $black-brown-light;
-      //display: none;
+      // display: none;
 
       li {
         float: none;
@@ -75,8 +73,16 @@
     }
 
     &.show {
-      @include transform(translateX(0)) !important;
-    }    
+      @include transform(translateX(0));
+    }
+
+    .main-menu-toggle-close {
+      background-image: url('../../graphics/icons/close.svg');
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 30px;
+      height: 35px;
+    }   
   }
 
   @include media($breakpoint-small) {
